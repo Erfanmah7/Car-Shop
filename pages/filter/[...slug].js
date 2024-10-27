@@ -9,6 +9,8 @@ function Filter() {
     (item) => item.price > min && item.price < max
   );
 
+  if (!filterData.length) return <h3>NotFound</h3>;
+
   return (
     <div>
       Filter {min}/{max}
