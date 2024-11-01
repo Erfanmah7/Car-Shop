@@ -12,8 +12,8 @@ function Layout({ children }) {
       </header>
       <div className={styles.container}>{children}</div>
       <footer className={styles.footer}>
-        <a href="https://erfandevart.ir" target="_blank">
-          erfandevart -
+        <a href="https://devfusion.ir" target="_blank">
+          devfusion -
         </a>
         Next.js courses | ShopCar Project &copy;
       </footer>

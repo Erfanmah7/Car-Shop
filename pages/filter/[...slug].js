@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import carsData from "../../data/carsData";
+import CarsList from "../../components/templates/CarsList";
 
 function Filter() {
   const router = useRouter();
@@ -11,11 +12,9 @@ function Filter() {
 
   if (!filterData.length) return <h3>NotFound</h3>;
 
-  return (
-    <div>
-      Filter {min}/{max}
-    </div>
-  );
+  if (!filteredData.length) return <h3>NotFound</h3>;
+
+  return <CarsList data={filteredData} />;
 }
 
 export default Filter;
