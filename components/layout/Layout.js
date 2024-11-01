@@ -12,7 +12,7 @@ function Layout({ children }) {
       </header>
       <div className={styles.container}>{children}</div>
       <footer className={styles.footer}>
-        <a href="https://devfusion.ir" target="_blank">
+        <a href="https://devfusion.ir">
           devfusion -
         </a>
         Next.js courses | ShopCar Project &copy;
