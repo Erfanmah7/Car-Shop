@@ -5,9 +5,20 @@ import styles from "./SearchBar.module.css";
 function SearchBar() {
   const router = useRouter();
 
+  const [min, setMin] = useState("");
+  const [max, setMax] = useState("");
+
+  const searchHandler = () => {
+    if (min && max) {
+      router.push(`/filter/${min}/${max}`);
+    } else {
+      alert("Please Enter minimum and maximum price!");
+    }
+  };
+
   return (
     <div className={styles.container}>
-      {/* <div>
+      <div>
         <input
           placeholder="Inter min-price"
           value={min}
@@ -19,7 +30,7 @@ function SearchBar() {
           onChange={(e) => setMax(e.target.value)}
         />
       </div>
-      <button onClick={searchHandler}>Search</button> */}
+      <button onClick={searchHandler}>Search</button>
     </div>
   );
 }

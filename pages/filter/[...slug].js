@@ -12,9 +12,7 @@ function Filter() {
 
   if (!filterData.length) return <h3>NotFound</h3>;
 
-  if (!filteredData.length) return <h3>NotFound</h3>;
-
-  return <CarsList data={filteredData} />;
+  return <CarsList data={filterData} />;
 }
 
 export default Filter;
